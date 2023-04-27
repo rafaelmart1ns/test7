@@ -1,8 +1,10 @@
-name: harness-example
-replicas: 1
+name: harness-example-${env.name}
+replicas: 3
 
 image: ${artifact.metadata.image}
 dockercfg: ${artifact.source.dockerconfig}
+
+createImagePullSecret: false
 
 createNamespace: true
 namespace: ${infra.kubernetes.namespace}
@@ -15,7 +17,7 @@ serviceType: LoadBalancer
 # A Service can map an incoming port to any targetPort.
 # targetPort is where application is listening on inside the container.
 servicePort: 80
-serviceTargetPort: 80
+serviceTargetPort: 8080
 
 # Specify all environment variables to be added to the container.
 # The following two maps, config and secrets, are put into a ConfigMap
@@ -26,3 +28,7 @@ env:
     key1: value1
   secrets:
     key2: value2
+
+username: rafael
+password: foobar123
+namespace: ${secrets.getValue("namespacefoo")}
