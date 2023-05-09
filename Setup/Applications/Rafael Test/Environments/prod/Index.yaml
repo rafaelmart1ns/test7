@@ -7,5 +7,6 @@ variableOverrides:
   value: test
   valueType: TEXT
 - name: k8svar
+  serviceName: k8s
   value: vartest
   valueType: TEXT
