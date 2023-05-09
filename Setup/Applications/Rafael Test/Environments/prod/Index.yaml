@@ -6,10 +6,7 @@ variableOverrides:
 - name: testvar
   value: test
   valueType: TEXT
-- name: testvar2
-  value: test
-  valueType: TEXT
 - name: k8svar
-  serviceName: k8s
+  service: k8s
   value: vartest
   valueType: TEXT
