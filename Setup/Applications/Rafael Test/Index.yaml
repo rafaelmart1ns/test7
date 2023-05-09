@@ -1,0 +1,7 @@
+harnessApiVersion: '1.0'
+type: APPLICATION
+areWebHookSecretsMandated: false
+branchName: main
+gitConnector: rafaelgit
+isGitSyncEnabled: true
+isManualTriggerAuthorized: false

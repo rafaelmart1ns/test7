@@ -1,0 +1,12 @@
+harnessApiVersion: '1.0'
+type: PIPELINE
+pipelineStages:
+- type: ENV_STATE
+  name: test
+  parallel: false
+  skipCondition:
+    expression: ${empty(${workflow.variables.data})}
+    type: CONDITIONAL_SKIP
+  stageName: STAGE 1
+  workflowName: Jira Test
+rollbackPreviousStages: false

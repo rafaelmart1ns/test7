@@ -1,0 +1,10 @@
+harnessApiVersion: '1.0'
+type: INFRA_DEFINITION
+cloudProviderType: CUSTOM
+deploymentType: CUSTOM
+deploymentTypeTemplateUri: Harness123/cd
+infrastructure:
+- type: CUSTOM
+  infraVariables:
+  - name: url
+    value: bla

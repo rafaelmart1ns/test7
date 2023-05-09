@@ -1,0 +1,8 @@
+harnessApiVersion: '1.0'
+type: GCS
+artifactPaths:
+- a/*.zip
+bucketName: repro-cds-52411-1
+collectionEnabled: true
+projectId: spg-play
+serverName: Google Cloud Platform - Rafael
