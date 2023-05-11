@@ -1,9 +1,9 @@
 harnessApiVersion: '1.0'
 type: NEXUS
 artifactPaths:
-- hello
+- ${atid}
 collectionEnabled: false
-groupId: spring-boot
+groupId: ${gpid}
 metadataOnly: true
 repositoryFormat: maven
 repositoryName: test
