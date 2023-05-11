@@ -1,0 +1,10 @@
+harnessApiVersion: '1.0'
+type: NEXUS
+artifactPaths:
+- ${artifactID}
+collectionEnabled: false
+groupId: ${groupID}
+metadataOnly: true
+repositoryFormat: maven
+repositoryName: arvind-snapshot
+serverName: nexus2 manju testing
