@@ -54,8 +54,16 @@ phases:
     name: Wrap Up
     stepsInParallel: false
   provisionNodes: false
-  serviceName: nexus last
   statefulSet: false
+  templateExpressions:
+  - expression: ${Service}
+    fieldName: serviceId
+    metadata:
+    - name: relatedField
+    - name: artifactType
+      value: JAR
+    - name: entityType
+      value: SERVICE
 preDeploymentSteps:
 - type: ARTIFACT_CHECK
   name: Artifact Check
@@ -106,6 +114,29 @@ rollbackPhases:
     name: Wrap Up
     stepsInParallel: false
   provisionNodes: false
-  serviceName: nexus last
   statefulSet: false
-templatized: false
+  templateExpressions:
+  - expression: ${Service}
+    fieldName: serviceId
+    metadata:
+    - name: relatedField
+    - name: artifactType
+      value: JAR
+    - name: entityType
+      value: SERVICE
+templateExpressions:
+- expression: ${Service}
+  fieldName: serviceId
+  metadata:
+  - name: relatedField
+  - name: artifactType
+    value: JAR
+  - name: entityType
+    value: SERVICE
+templatized: true
+userVariables:
+- type: ENTITY
+  description: Variable for Service entity
+  fixed: false
+  mandatory: true
+  name: Service
