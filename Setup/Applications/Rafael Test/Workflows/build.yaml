@@ -14,6 +14,18 @@ phases:
   phaseSteps:
   - type: PREPARE_STEPS
     name: Prepare Steps
+    steps:
+    - type: GCB
+      name: Google Cloud Build
+      properties:
+        executeWithPreviousSteps: false
+        gcbOptions:
+          specSource: INLINE
+          inlineSpec: '{}'
+          gcpConfigName: fd-gcp
+        sweepingOutputName: null
+        sweepingOutputScope: null
+        timeoutMillis: 600000
     stepsInParallel: false
   - type: COLLECT_ARTIFACT
     name: Collect Artifact
