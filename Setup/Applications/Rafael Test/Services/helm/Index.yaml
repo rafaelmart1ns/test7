@@ -3,4 +3,4 @@ type: SERVICE
 artifactFromManifest: true
 artifactType: DOCKER
 deploymentType: KUBERNETES
-helmVersion: V2
+helmVersion: V3
