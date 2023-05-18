@@ -1,0 +1,8 @@
+harnessApiVersion: '1.0'
+type: APPLICATION_MANIFEST
+enableCollection: true
+helmChartConfig:
+  chartName: test
+  connectorName: marko-oci-test
+skipVersioningForAllK8sObjects: true
+storeType: HelmChartRepo
