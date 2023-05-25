@@ -38,6 +38,13 @@ phases:
     steps:
     - type: PCF_RESIZE
       name: App Resize
+      properties:
+        instanceCount: 100
+        instanceUnitType: PERCENTAGE
+        templateUuid: null
+        templateVariables: null
+        templateVersion: null
+        timeoutIntervalInMinutes: 5
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
